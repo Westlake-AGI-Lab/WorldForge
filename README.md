@@ -140,13 +140,13 @@ We thank the research community for their valuable contributions to video diffus
 
 - [**Wan-2.1**](https://github.com/Wan-Video/Wan2.1) - Large-scale video generation model
 - [**SVD (Stable Video Diffusion)**](https://github.com/Stability-AI/generative-models) - Video diffusion model by Stability AI
-- [**VGGT**](https://github.com/3DTopia/3DTopia) - 3D generation and reconstruction toolkit
+- [**VGGT**](https://vgg-t.github.io/) - 3D generation and reconstruction toolkit
 - [**ReCamMaster**](https://github.com/KwaiVGI/ReCamMaster) - Trajectory-controlled video generation
-- [**TrajectoryCrafter**](https://github.com/jiaxiangc/TrajectoryCrafter) - Trajectory-based video synthesis
-- [**NVS-Solver**](https://github.com/zju3dv/NVS-Solver) - Novel view synthesis solution
-- [**ViewExtrapolator**](https://github.com/NVlabs/ViewExtrapolator) - View extrapolation for 3D scenes
+- [**TrajectoryCrafter**](https://trajectorycrafter.github.io/) - Trajectory-based video synthesis
+- [**NVS-Solver**](https://github.com/ZHU-Zhiyu/NVS_Solver) - Novel view synthesis solution
+- [**ViewExtrapolator**](https://kunhao-liu.github.io/ViewExtrapolator) - View extrapolation for 3D scenes
 - [**DepthCrafter**](https://github.com/Tencent/DepthCrafter) - Depth-aware video generation
-- [**Mega-SAM**](https://github.com/MegviiRobot/Mega-SAM) - Large-scale segmentation model
+- [**Mega-SAM**](https://github.com/mega-sam/mega-sam) - Large-scale segmentation model
 
 ## Contact
 
