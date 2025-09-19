@@ -87,9 +87,9 @@ We showcase diverse capabilities including:
 - **4D Video Re-cam**: Camera arc rotation, local close-ups, outpainting, viewpoint transferring, video stabilization  
 - **Video Editing**: Object removal/addition, face swapping, subject transformation, try-on applications
 
-## Evaluation Results
-Complete results and comparisons with other baselines will be available at: [Results Link - To be added]
-<!-- 请提供评估结果的存储位置，可以是Google Drive链接或其他存储服务 -->
+<!-- ## Evaluation Results
+Complete results and comparisons with other baselines will be available at: [Results Link - To be added] -->
+
 
 ## Installation and Usage
 
