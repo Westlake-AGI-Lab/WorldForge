@@ -107,7 +107,6 @@ Complete results and comparisons with other baselines will be available at: [Res
 
 ### Inference
 ```bash
-# Training scripts (if applicable) and inference pipeline
 # Detailed documentation will be available upon release
 ```
 
