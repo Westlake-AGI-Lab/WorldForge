@@ -144,8 +144,8 @@ We thank the research community for their valuable contributions to video diffus
 - [**TrajectoryCrafter**](https://trajectorycrafter.github.io/) - Trajectory-based video synthesis
 - [**NVS-Solver**](https://github.com/ZHU-Zhiyu/NVS_Solver) - Novel view synthesis solution
 - [**ViewExtrapolator**](https://kunhao-liu.github.io/ViewExtrapolator) - View extrapolation for 3D scenes
-- [**DepthCrafter**](https://github.com/Tencent/DepthCrafter) - Depth-aware video generation
-- [**Mega-SAM**](https://github.com/mega-sam/mega-sam) - Large-scale segmentation model
+- [**DepthCrafter**](https://github.com/Tencent/DepthCrafter) - Video sequence depth estimation
+- [**Mega-SAM**](https://github.com/mega-sam/mega-sam) - Video depth and pose estimation
 
 ## Contact
 
