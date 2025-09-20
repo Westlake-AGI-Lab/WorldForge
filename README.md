@@ -13,7 +13,7 @@
   <img src="teaser/Page_office_30fps.gif" alt="WorldForge Teaser" width="100%">
 </div>
 
-[Chenxi Song](https://scholar.google.com/citations?hl=zh-CN&user=rytyb7QAAAAJ)<sup>1</sup>, [Yanming Yang](https://2hiTee.github.io)<sup>1</sup>, [Tong Zhao](https://tongzhao1030.github.io)<sup>1</sup>, [Ruibo Li](https://scholar.google.com/citations?hl=zh-CN&user=qtGY5T4AAAAJ&view_op=list_works&sortby=pubdate)<sup>2</sup>, [Chi Zhang](https://icoz69.github.io)<sup>1*</sup>
+[Chenxi Song](https://chenxi-song.github.io)<sup>1</sup>, [Yanming Yang](https://2hiTee.github.io)<sup>1</sup>, [Tong Zhao](https://tongzhao1030.github.io)<sup>1</sup>, [Ruibo Li](https://scholar.google.com/citations?hl=zh-CN&user=qtGY5T4AAAAJ&view_op=list_works&sortby=pubdate)<sup>2</sup>, [Chi Zhang](https://icoz69.github.io)<sup>1*</sup>
 
 <sup>1</sup>AGI Lab, Westlake University  
 <sup>2</sup>The College of Computing and Data Science, Nanyang Technological University  
