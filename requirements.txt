@@ -1,0 +1,45 @@
+# WorldForge dependencies (install after PyTorch)
+# pip install -r requirements.txt
+
+# Core
+ninja
+numpy<2
+Pillow
+opencv-python
+tqdm
+scipy
+matplotlib
+einops
+safetensors
+huggingface_hub
+
+# Diffusion / Transformers (quality-critical — transformers must be <5.0, 5.x breaks model loading)
+diffusers==0.35.1
+transformers>=4.49.0,<5.0  # recommended: 4.49.0
+accelerate>=1.11.0
+tokenizers
+
+# DepthCrafter
+mediapy
+fire
+decord==0.6.0
+OpenEXR
+
+# VGGT
+pycolmap
+kornia
+
+# Wan
+imageio
+imageio-ffmpeg
+easydict
+ftfy
+dashscope
+gradio
+
+# LongCat
+loguru
+av
+streamlit
+pyarrow
+psutil

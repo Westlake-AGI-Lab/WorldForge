@@ -1,0 +1,30 @@
+# WorldForge Environment
+# Tested: Python 3.11, PyTorch 2.6.0, CUDA 12.x
+#
+# ==================== Install ====================
+#
+# 1. Create conda env
+#    conda create -n worldforge python=3.11 -y
+#    conda activate worldforge
+#
+# 2. Install PyTorch (pick your CUDA version from https://pytorch.org)
+#    pip install torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cu124
+#
+# 3. Install all dependencies
+#    pip install -r requirements.txt
+#
+# 4. Install GPU libraries
+#    pip install xformers --index-url https://download.pytorch.org/whl/cu124
+#
+#    # flash-attn must use pre-built wheel (source build has ABI mismatch with pip PyTorch)
+#    # Torch 2.6 + CUDA 12 + Python 3.11:
+#    pip install https://github.com/Dao-AILab/flash-attention/releases/download/v2.7.4.post1/flash_attn-2.7.4.post1+cu12torch2.6cxx11abiFALSE-cp311-cp311-linux_x86_64.whl --no-deps
+#    # Other combos: https://github.com/Dao-AILab/flash-attention/releases (pick cxx11abiFALSE)
+#
+# 5. Install pytorch3d (for DepthCrafter, needs nvcc)
+#    conda install -c nvidia cuda-toolkit -y
+#    export TORCH_CUDA_ARCH_LIST=$(python -c "import torch; c=torch.cuda.get_device_capability(); print(f'{c[0]}.{c[1]}')")
+#    pip install --no-build-isolation "git+https://github.com/facebookresearch/pytorch3d.git@stable"
+#
+# 6. Install LightGlue (for VGGT)
+#    pip install --no-build-isolation git+https://github.com/cvg/LightGlue.git
