@@ -271,7 +271,7 @@ We thank the research community for their valuable contributions to video diffus
 
 ## Contact
 
-For questions and discussions, please feel free to open an [issue](https://github.com/worldforge-agi/worldforge/issues) or contact:
+For questions and discussions, please feel free to open an [issue](https://github.com/Westlake-AGI-Lab/WorldForge/issues) or contact:
 - Chenxi Song: songchenxi@westlake.edu.cn
 - Chi Zhang: chizhang@westlake.edu.cn
 
