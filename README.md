@@ -1,6 +1,6 @@
 <img src="teaser/worldforge.png" alt="WorldForge Logo" width="45" align="left" style="margin-right: 10px;"> 
 
-# WorldForge
+# WorldForge (CVPR 2026)
 <div align="center">
 
 [![arXiv](https://img.shields.io/badge/arXiv%20paper-2509.15130-b31b1b)](https://arxiv.org/abs/2509.15130)&nbsp;
@@ -9,19 +9,24 @@
 
 </div>
 
-**[WorldForge: Unlocking Emergent 3D/4D Generation in Video Diffusion via Training-Free Guidance](https://arxiv.org/abs/2509.15130)**
-
 <div align="center">
-  <img src="teaser/Page_office_30fps.gif" alt="WorldForge Teaser" width="100%">
-</div>
+
+**[Taming Video Models for 3D and 4D Generation via Zero-Shot Camera Control](https://arxiv.org/abs/2509.15130)**
+
+<img src="teaser/teaser.png" alt="WorldForge Teaser" width="100%">
+
+<br>
 
 [Chenxi Song](https://chenxi-song.github.io)<sup>1</sup>, [Yanming Yang](https://2hiTee.github.io)<sup>1</sup>, [Tong Zhao](https://tongzhao1030.github.io)<sup>1</sup>, [Ruibo Li](https://scholar.google.com/citations?hl=zh-CN&user=qtGY5T4AAAAJ&view_op=list_works&sortby=pubdate)<sup>2</sup>, [Chi Zhang](https://icoz69.github.io)<sup>1*</sup>
-
-<sup>1</sup>AGI Lab, Westlake University  
-<sup>2</sup>The College of Computing and Data Science, Nanyang Technological University  
+<br>
+<sup>1</sup>AGI Lab, Westlake University &nbsp;&nbsp;&nbsp; <sup>2</sup>Nanyang Technological University
+<br>
 <sup>*</sup>Corresponding Author
 
+</div>
+
 ## Update
+- [2026.02] 🎉 Accepted by **CVPR 2026!**
 - [2026.02] 🔥 **Code released!** VGGT 3D warping, DepthCrafter 4D warping, Wan2.1 & LongCat-Video inference are now available.
 - [2025.09] [arXiv](https://arxiv.org/abs/2509.15130) preprint is available.
 - [2025.09] [Project page](https://worldforge-agi.github.io) is online.
@@ -262,7 +267,7 @@ We thank the research community for their valuable contributions to video diffus
 
 ```bibtex
 @misc{song2025worldforgeunlockingemergent3d4d,
-  title={WorldForge: Unlocking Emergent 3D/4D Generation in Video Diffusion Model via Training-Free Guidance}, 
+  title={Taming Video Models for 3D and 4D Generation via Zero-Shot Camera Control}, 
   author={Chenxi Song and Yanming Yang and Tong Zhao and Ruibo Li and Chi Zhang},
   year={2025},
   url={https://arxiv.org/abs/2509.15130}, 
