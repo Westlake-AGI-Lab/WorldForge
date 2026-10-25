@@ -1,0 +1,30 @@
+[
+  {
+    "id": "91d19c97__arc_right",
+    "image": "91d19c97__arc_right/ref.png",
+    "warp": "91d19c97__arc_right/frames",
+    "mask": "91d19c97__arc_right/mask",
+    "prompt": "Use Picture 1 as the exact first frame and follow the exact camera viewpoints and motion in Video 1. Follow the full camera trajectory of the reference video (Video 1) frame by frame, including camera translation and rotation, viewing direction, motion direction, path, timing and speed. Keep the same starting camera pose, framing and perspective. Do not recenter or reframe the scene, add camera cuts, invent a zoom, or introduce extra camera movement. Reconstruct the same scene shown in Video 1, filling only missing or invalid regions. Preserve the geometry, spatial layout and appearance of the references. Photorealistic, sharp, temporally stable video.",
+    "seed": 2082447419
+  },
+  {
+    "id": "8069d6f7__smooth",
+    "image": "8069d6f7__smooth/ref.png",
+    "warp": "8069d6f7__smooth/frames",
+    "mask": "8069d6f7__smooth/mask",
+    "prompt": "Use Picture 1 as the exact first frame and follow the exact camera viewpoints and motion in Video 1. Follow the full camera trajectory of the reference video (Video 1) frame by frame, including camera translation and rotation, viewing direction, motion direction, path, timing and speed. Keep the same starting camera pose, framing and perspective. Do not recenter or reframe the scene, add camera cuts, invent a zoom, or introduce extra camera movement. Reconstruct the same scene shown in Video 1, filling only missing or invalid regions. Preserve the geometry, spatial layout and appearance of the references. Photorealistic, sharp, temporally stable video.",
+    "seed": 2140143778
+  },
+  {
+    "id": "9d821bd4__orbit_return_push__90",
+    "image": "9d821bd4__orbit_return_push__90/ref.png",
+    "warp": "9d821bd4__orbit_return_push__90/frames",
+    "mask": "9d821bd4__orbit_return_push__90/mask",
+    "prompt": "Use Picture 1 as the first frame. Follow the camera viewpoints and motion in Video 1. Preserve the scene geometry and appearance, and fill the missing regions with sharp, temporally consistent details.",
+    "seed": 42,
+    "preprocessing": {
+      "frames": 90,
+      "image_framing": null
+    }
+  }
+]

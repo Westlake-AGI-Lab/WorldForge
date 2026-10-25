@@ -1,0 +1,15 @@
+diffsynth @ git+https://github.com/modelscope/DiffSynth-Studio.git@c458cb42ab1ee838bff85c6546e14bb01c3571e9
+numpy==1.26.4
+transformers==4.57.6
+huggingface_hub==0.36.2
+tokenizers==0.22.2
+peft==0.18.1
+accelerate==1.15.0
+safetensors>=0.4
+Pillow>=10
+scipy>=1.10
+imageio[ffmpeg]>=2.34
+einops>=0.8
+qwen-vl-utils
+av
+librosa

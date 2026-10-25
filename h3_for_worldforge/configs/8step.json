@@ -1,0 +1,42 @@
+{
+  "sampling": {
+    "steps": 8,
+    "video_shift": 8.0,
+    "audio_shift": 3.0,
+    "guide_steps": 5,
+    "reference_steps": 8,
+    "lora_steps": 8
+  },
+  "acceleration": "larry_v4",
+  "preprocessing": {
+    "frames": 56,
+    "width": 832,
+    "height": 480,
+    "frame_policy": "pad",
+    "reference": {
+      "image_short_edge": 1024,
+      "video_short_edge": 480,
+      "video_max_pixels": 399360,
+      "text_image_short_edge": 2048
+    },
+    "visibility": {
+      "mode": "soft",
+      "temporal_aggregation": "mean",
+      "quantization": 8,
+      "minimum_weight": 0,
+      "minimum_tokens_per_frame": 16
+    },
+    "latent_mask": {
+      "spatial_erode_radius": 2,
+      "spatial_blur_radius": 1,
+      "temporal_blur_radius": 1
+    },
+    "condition_noise_aug": 0.999,
+    "condition_seed_offset": 42,
+    "image_framing": {
+      "aspect_width": 16,
+      "aspect_height": 9
+    }
+  },
+  "trajectory_alpha": 128
+}

@@ -1,47 +1,49 @@
-# WorldForge (CVPR 2026 $\color{#ea3277}{\textbf{\textsf{Highlight}}}$)
+# WorldForge (CVPR 2026 $\color{#ea3277}{\textbf{\textsf{Highlight}}}$) & $\color{#5B2C83}{\textbf{\textsf{WorldForge V2}}}$
 <div align="center">
 
 [![arXiv](https://img.shields.io/badge/arXiv%20paper-2509.15130-b31b1b)](https://arxiv.org/abs/2509.15130)&nbsp;
+[![arXiv V2](https://img.shields.io/badge/arXiv%20V2-2610.31640-8a2be2)](https://arxiv.org/html/2610.31640)&nbsp;
 [![project page](https://img.shields.io/badge/Project%20page-WorldForge-blue)](https://worldforge-agi.github.io)&nbsp;
 [![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-Paper-yellow)](https://huggingface.co/papers/2509.15130)&nbsp;
+[![Hugging Face Weights](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-V2%20Weights-6B3FA0)](https://huggingface.co/Chenxis27/WorldForge-V2)
 
 </div>
 
 <div align="center">
 
-<img src="teaser/worldforge.png" alt="WorldForge Logo" width="40">&nbsp;<b><a href="https://arxiv.org/abs/2509.15130">Taming Video Models for 3D and 4D Generation via Zero-Shot Camera Control</a></b>
+<p><b><a href="https://arxiv.org/abs/2509.15130">Taming Video Models for 3D and 4D Generation via Zero-Shot Camera Control</a></b></p>
 
-<img src="teaser/teaser.png" alt="WorldForge Teaser" width="100%">
+<p><b><a href="https://arxiv.org/html/2610.31640">WorldForge V2: Eliciting Camera-Trajectory Alignment in Video Diffusion Models</a></b></p>
 
-<br>
-
-[Chenxi Song](https://chenxi-song.github.io)<sup>1</sup>, [Yanming Yang](https://2hiTee.github.io)<sup>1</sup>, [Tong Zhao](https://tongzhao1030.github.io)<sup>1</sup>, [Ruibo Li](https://scholar.google.com/citations?hl=zh-CN&user=qtGY5T4AAAAJ&view_op=list_works&sortby=pubdate)<sup>2</sup>, [Chi Zhang](https://icoz69.github.io)<sup>1*</sup>
-<br>
-<sup>1</sup>AGI Lab, Westlake University &nbsp;&nbsp;&nbsp; <sup>2</sup>Nanyang Technological University
-
+<p>
+  <a href="teaser/teaser.png"><img src="teaser/teaser.png" alt="WorldForge V1: 3D scene generation and dynamic 4D re-rendering" width="54%"></a><img src="teaser/version_divider.svg" alt="" width="2%"><a href="teaser/worldforge_v2_pipeline.png"><img src="teaser/worldforge_v2_pipeline.png" alt="WorldForge V2 pipeline: V-Cache and trajectory LoRA" width="41.981635%"></a>
+</p>
 
 </div>
 
 ## Update
-- [2026.04] 🏆 Selected as **CVPR 2026 Highlight!**
+- [2026.10] 🚀 $\color{#5B2C83}{\textbf{\textsf{WorldForge V2}}}$: [paper](https://arxiv.org/html/2610.31640) and [code and weights](h3_for_worldforge/README.md) are now available.
+- [2026.04] 🏆 Selected as **CVPR 2026** $\color{#ea3277}{\textbf{\textsf{Highlight!}}}$
 - [2026.02] 🎉 Accepted by **CVPR 2026!**
 - [2026.02] 🔥 **Code released!** VGGT 3D warping, DepthCrafter 4D warping, Wan2.1 & LongCat-Video inference are now available.
 - [2025.09] [arXiv](https://arxiv.org/abs/2509.15130) preprint is available.
 - [2025.09] [Project page](https://worldforge-agi.github.io) is online.
 
+## Versions
+
+Choose a version below. Each section contains its setup, model weights, and usage instructions.
+
 <details>
-<summary><b>Introduction</b></summary>
+<summary><strong>WorldForge V1 — Training-free camera control (CVPR 2026 Highlight)</strong></summary>
+
+## Introduction
 
 **WorldForge** is a **training-free** framework that unlocks the world-modeling potential of video diffusion models for controllable **3D/4D generation**. By leveraging latent world priors in pretrained video diffusion models, WorldForge achieves precise trajectory control and photorealistic content generation — all **without any additional training**.
 
-![image](teaser/pipeline3.png)
-
 The core idea is a *warping-and-repainting* pipeline with three inference-time mechanisms (IRR, FLF, DSG) that jointly inject trajectory-aligned guidance while preserving visual fidelity. For details, please refer to our [paper](https://arxiv.org/abs/2509.15130) and [project page](https://worldforge-agi.github.io).
 
-</details>
 
-<details>
-<summary><b>What's Released</b></summary>
+## What's Released
 
 | Module | Description |
 | --- | --- |
@@ -54,7 +56,6 @@ The core idea is a *warping-and-repainting* pipeline with three inference-time m
 - **LongCat-Video** supports a distilled mode (16 steps) with 480p→720p upscaling, offering faster generation. It works well on realistic scenes; for stylized or non-photorealistic content, Wan2.1 720p may yield better results.
 - **Wan2.1 720p** (50 steps) generally delivers higher visual quality, at the cost of longer inference time.
 
-</details>
 
 ## Installation
 
@@ -246,6 +247,93 @@ We welcome contributions, issues, and discussions! If you have ported WorldForge
 
 > P.S. Stay tuned for our upcoming new work — a faster, simpler, and more unified world model architecture. Coming soon! 🚀🚀🚀
 
+</details>
+
+<details>
+<summary><strong>WorldForge V2 — H3 trajectory LoRA</strong></summary>
+
+### Requirements
+
+Use **Python 3.10**, **PyTorch 2.6 / CUDA 12.4**, and an **80 GB GPU**.
+
+```bash
+conda create -n worldforge-v2 python=3.10 -y
+conda activate worldforge-v2
+cd h3_for_worldforge
+python -m pip install --upgrade pip wheel 'setuptools>=77,<81'
+pip install torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 \
+  --index-url https://download.pytorch.org/whl/cu124
+pip install -r requirements.txt
+```
+
+Download [MiniMax-H3 Ref2VA](https://modelscope.cn/models/MiniMax/MiniMax-H3)
+into `weights/MiniMax-H3/Ref2VA/` and place the
+[trajectory LoRA](https://huggingface.co/Chenxis27/WorldForge-V2/blob/main/h3-wfv2.safetensors) at
+`weights/h3-wfv2.safetensors`.
+
+```bash
+hf download Chenxis27/WorldForge-V2 \
+  h3-wfv2.safetensors --local-dir weights
+```
+
+The default **8-step** mode also uses
+[Larry's acceleration LoRA (v4 step600 EMA)](https://huggingface.co/larryvrh/MiniMax-H3-Turbo-Lora/blob/main/minimax_h3_turbo_v4_step600_ema.safetensors):
+
+```bash
+hf download larryvrh/MiniMax-H3-Turbo-Lora \
+  minimax_h3_turbo_v4_step600_ema.safetensors --local-dir weights
+```
+
+### Quick Start
+
+Three prepared DL3DV examples are included in `h3_for_worldforge/examples/`,
+each with an input image, warped frames, and visibility masks.
+[examples/cases.json](h3_for_worldforge/examples/cases.json) lists all three inputs,
+including a longer 90-frame trajectory.
+The warped frames and masks are already the trajectory inputs; no depth estimation
+is needed to run these prepared examples.
+
+Prepare the inputs once:
+
+```bash
+python infer.py prepare --input examples/cases.json \
+  --model-root weights/MiniMax-H3 --cache-dir cache/examples
+```
+
+**8-step sampling (default):**
+
+```bash
+python infer.py generate --cache cache/examples \
+  --model-root weights/MiniMax-H3 --lora weights/h3-wfv2.safetensors \
+  --acceleration-lora weights/minimax_h3_turbo_v4_step600_ema.safetensors \
+  --output outputs/8step
+```
+
+**50-step sampling:** reuse the same prepared inputs without the acceleration LoRA.
+
+```bash
+python infer.py generate --cache cache/examples --config configs/50step.json \
+  --model-root weights/MiniMax-H3 --lora weights/h3-wfv2.safetensors \
+  --output outputs/50step
+```
+
+The presets include the recommended settings. Videos are saved to the chosen
+output directory; use `--alpha` if you want to adjust the trajectory LoRA strength.
+
+### Use Your Own Data
+
+Follow the [WorldForge V1 warping pipeline](#quick-start): estimate depth from
+the input image, specify a camera trajectory, and render the warped RGB frames
+and visibility masks. Masks should be **white for visible pixels and black for
+holes**. Keep the input image, warped frames, and masks aligned to the same view.
+
+Create a JSON entry with your image, frame directory, mask directory, and prompt,
+following [examples/cases.json](h3_for_worldforge/examples/cases.json). Then run the
+same commands, passing `--input path/to/your_cases.json` to `prepare`.
+See the [H3 guide](h3_for_worldforge/README.md#use-your-own-data) for the input format.
+
+</details>
+
 ## Acknowledgments
 
 We thank the research community for their valuable contributions to video diffusion models and 3D/4D generation. Special thanks to the following open-source projects that inspired and supported our work:
@@ -269,6 +357,13 @@ We thank the research community for their valuable contributions to video diffus
   author={Song, Chenxi and Yang, Yanming and Zhao, Tong and Li, Ruibo and Zhang, Chi},
   journal={arXiv preprint arXiv:2509.15130},
   year={2025}
+}
+
+@article{song2026worldforgev2,
+  title={WorldForge V2: Eliciting Camera-Trajectory Alignment in Video Diffusion Models},
+  author={Song, Chenxi and Yang, Yanming and Zhao, Tong and Li, Ruibo and Zhou, Joey Tianyi and Zhang, Chi},
+  journal={arXiv preprint arXiv:2610.31640},
+  year={2026}
 }
 
 ```
